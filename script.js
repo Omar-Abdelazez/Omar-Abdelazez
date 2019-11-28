@@ -10,7 +10,7 @@ var letters = [
 ];
 var arr_ch = [letters.length];
 
-setInterval(function(){ window.localStorage.clear(); }, 50000);
+setInterval(function(){ window.localStorage.clear(); }, 5000);
 
 var event_object = { "Event Type": "", "Event Target": "", "Event Time": ""};
 
