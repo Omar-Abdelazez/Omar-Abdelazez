@@ -10,33 +10,36 @@ var letters = [
 ];
 var arr_ch = [letters.length];
 
-var event_object = { "Event Type": "", "Event Target": "", "Event Time": ""};
+setInterval(function(){ window.localStorage.clear(); }, 50000);
 
-setInterval(function(){ window.localStorage.clear(); }, 5000);
+var event_object = { "Event Type": "", "Event Target": "", "Event Time": ""};
 
 var ob_Windows_OnLoad = Object.create(event_object);
 var ob_Windows_OnunLoad = Object.create(event_object);
 var ob_Generate_Button = Object.create(event_object);
 var ob_Alphabet_Button = Object.create(event_object);
 
-window.onload = function (e) {
-  ob_Windows_OnLoad['Event Type'] = e.type;
-  ob_Windows_OnLoad['Event Target'] = e.target;
-  ob_Windows_OnLoad['Event Time'] = e.timeStamp;
+function get_event_info(object_name, e){
+  object_name['Event Type'] = e.type;
+  object_name['Event Target'] = e.target;
+  object_name['Event Time'] = e.timeStamp;
+}
+
+function store_event_info(object_name, key_name){
   var arr = [];
-  arr.push(ob_Windows_OnLoad);
-  arr.push(JSON.parse(window.localStorage.getItem('Windows OnLoad')));
-  window.localStorage.setItem('Windows OnLoad', JSON.stringify(arr)); 
+  arr.push(object_name);
+  arr.push(JSON.parse(window.localStorage.getItem(key_name)));
+  window.localStorage.setItem(key_name, JSON.stringify(arr)); 
+}
+
+window.onload = function (e) {
+  get_event_info(ob_Windows_OnLoad, e);
+  store_event_info(ob_Windows_OnLoad, 'Windows OnLoad');
 };
 
 window.onunload = function (e) {
-  ob_Windows_OnunLoad['Event Type'] = e.type;
-  ob_Windows_OnunLoad['Event Target'] = e.target;
-  ob_Windows_OnunLoad['Event Time'] = e.timeStamp;
-  var arr = [];
-  arr.push(ob_Windows_OnunLoad);
-  arr.push(JSON.parse(window.localStorage.getItem('Windows OnUnload')));
-  window.localStorage.setItem('Windows OnUnloadn', JSON.stringify(arr)); 
+  get_event_info(ob_Windows_OnunLoad, e);  
+  store_event_info(ob_Windows_OnunLoad, 'Windows OnUnloadn');
 };
 
 in_btn.addEventListener('click', function(e) {
@@ -45,13 +48,8 @@ in_btn.addEventListener('click', function(e) {
   else
     div_empty=false;
 
-  ob_Generate_Button["Event Type"] = e.type;
-  ob_Generate_Button["Event Target"] = e.target;
-  ob_Generate_Button["Event Time"] = e.timeStamp;
-  var arr = [];
-  arr.push(ob_Generate_Button);
-  arr.push(JSON.parse(window.localStorage.getItem('Generate Button')));
-  window.localStorage.setItem('Generate Button', JSON.stringify(arr)); 
+  get_event_info(ob_Generate_Button, e);
+  store_event_info(ob_Generate_Button, 'Generate Button');
   if (div_empty === false) {
     btn_div.innerHTML = '';
     img_div.innerHTML = '';
@@ -62,13 +60,9 @@ in_btn.addEventListener('click', function(e) {
     btn_div.addEventListener('click', function (e) {
       if(e.target.innerHTML.length === 1)
       {
-        ob_Alphabet_Button['Event Type'] = e.type;
-        ob_Alphabet_Button['Event Target'] = e.target;
-        ob_Alphabet_Button['Event Time'] = e.timeStamp;
-        var arr = [];
-        arr.push(ob_Alphabet_Button);
-        arr.push(JSON.parse(window.localStorage.getItem('Alphabet Random Button')));
-        window.localStorage.setItem('Alphabet Random Button', JSON.stringify(arr));
+        get_event_info(ob_Alphabet_Button, e);
+        store_event_info(ob_Alphabet_Button, 'Alphabet Random Button');
+
         img.setAttribute('src',`pic/${e.target.innerHTML}.jpg`);
         img_div.appendChild(img);
       }
