@@ -4,6 +4,11 @@ var btn_div = document.querySelector('#btn_div');
 var img_div = document.querySelector('#img_div');
 var img = document.querySelector('img');
 var div_empty = document.querySelector('.empty');
+var letters = [
+  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
+  "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"
+];
+var arr = [letters.length];
 
 var event_object = { "Event Type": "", "Event Target": "", "Event Time": ""};
 
@@ -61,16 +66,9 @@ in_btn.addEventListener('click', function(e) {
 });
 
 function rand_char(l) {
-  var letters = [
-    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
-    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x","y", "z"
-  ]
-
-  var arr = [letters.length];
   for (var i = 0; i < letters.length; i++) {
     arr[i]=false;
   }
-
   while (l > 0) {
     var x = Math.floor(Math.floor(Math.random() * 26) + 1);
 
