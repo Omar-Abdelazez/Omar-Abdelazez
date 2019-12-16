@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>P2: English Letters</title>
+    <style>
+      body{
+        background-image: url('pic/z_background.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      h1, span{
+        color: rgba(192, 192, 192, 0.774);
+      }      
+      span{
+        font-size: 22px;
+      }
+      button {
+        font-size: 22px;
+        margin: 3px;
+        padding: 12px;
+        background-color: rgb(180, 180, 180);
+      }
+      div {
+        margin-left: 15px;
+      }
+      img {
+        width: 27%;
+        display: block;
+        margin: 0 auto;
+      }
+      input {
+        font-size: 18px;
+        padding: 8px;
+        margin: 5px;
+        background-color: rgb(191, 186, 212);
+        border: 3px solid rgb(240, 255, 172);
+      }
+      #btn_div{
+        float: left;
+        width: 460px;
+        padding: 0px;
+      }
+      #get_table{
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn the English Letters</h1>
+    <div>
+      <span>Number of Letters</span>
+      <input type="text" name="" id="in_txt"> 
+      <input type="button" value="Generate" id="in_btn">
+      <input type="button" value="DB Table" onclick="window.location.href='/p2/DB_Table.html'" id="get_table">
+      <br><br>
+      <div id="btn_div" class="empty"></div>
+      <div id="img_div" class="empty">
+        <img src="">
+      </div>
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

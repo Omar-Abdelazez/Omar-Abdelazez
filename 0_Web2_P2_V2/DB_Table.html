@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>P2: DataBase Information</title>
+    <style>
+      body{
+        background-image: url('pic/z_background.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      span{
+        font-size: 38px;
+        color: rgba(192, 192, 192, 0.774);
+      }
+      #get_table,#db_btn{
+        float: right;
+        font-size: 18px;
+        padding: 8px;
+        margin: 5px;
+        background-color: rgb(191, 186, 212);
+        border: 3px solid rgb(240, 255, 172);
+      }     
+      table {
+        width: 100%;
+        background-color: #f1f1c1;
+        border: 2px solid black;
+        padding: 8px;
+      }
+      #t{
+        font-size: 25px;
+      }
+      th, td{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <span>All Events on the Project Page</span>    
+    <input type="button" value="Clear DB" id="db_btn">
+    <input type="button" value="Return to the Main Page" onclick="window.location.href='/p2/Project.html'" id="get_table">
+    <table id="t2">
+      <tr id="t">
+        <th>ID</th>
+        <th>Event Time</th>
+        <th>Event Type</th>
+        <th>Event Target</th>
+      </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      var get_table = document.querySelector('table');//to get the Table
+      var btn_db = document.querySelector('#db_btn');//Button that responsible on clearing the table in the database
+      //to carry on executing the necessary function on loading the window, 
+      //and get all the values in the DataBase table to the page table.
+      window.onload = function (e) {
+        $.ajax({
+          type: "GET",
+          url: "ajax.php",
+          data: {"data": ""},
+          success: function(response){
+            if(response){
+              var data = JSON.parse(response);
+              for(var i=0 ; i< data.length ; i++){
+                var tr = "<tr>";
+                    tr += "<td>"+data[i]['ID']+"</td>"; 	 	
+                    tr += "<td>"+data[i]['Event_Time']+"</td>";
+                    tr += "<td>"+data[i]['Event_Type']+"</td>";
+                    tr += "<td>"+data[i]['Event_Target']+"</td>";
+                    tr += "</tr>";
+                    $(get_table).find('tbody').append(tr);
+              }
+            }
+          }
+        });
+      }
+      //to carry on executing the necessary function on clicking on Clear DB Button,
+      //and delete all the values in the rows of the table, and refresh the page upon success.
+      btn_db.addEventListener('click', function(e) {
+        $.ajax({
+          type: "POST",
+          url: "ajax.php",
+          data: {"ClearDB": ""},
+          success: function(){
+            location.reload(true); 
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
