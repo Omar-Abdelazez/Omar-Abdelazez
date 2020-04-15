@@ -1,0 +1,227 @@
+/* The side navigation menu */
+
+body{
+  background-color: #151621;
+}
+
+.navbar{
+  display: none;
+}
+
+.navbar ul{
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .navbar-brand{
+  width: 70%;
+}
+
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  position: fixed;
+  height: 100%;
+  background-color: #0A1727;
+  overflow: auto;
+}
+
+.sidebar .admin-image{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar .admin-image img{
+  width: 50%;
+  border-radius: 50%;
+}
+
+/* Sidebar links */
+.sidebar li{
+  float: left;
+  display: block;
+  color: #fff;
+  padding: 16px;
+  width: 100%;
+}
+
+.sidebar li a{
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  padding: 16px;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar li a.active{
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar li a:hover {
+  background-color: #2196F3;
+  color: white;
+}
+
+.sidebar .admin-name{
+  text-align: center !important;
+}
+
+.pro{
+  position: relative;
+}
+
+.btn-ad{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.table{
+  border: 1px solid #ddd;
+}
+
+.table tr{
+  background-color: #1A1C2C;
+}
+
+
+.table tr img{
+  border-radius: 10px;
+  width: 20%;
+}
+
+.table .td-image{
+  width: 20%;
+}
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 150px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+.content .info .card, .content .add .card-welcome{
+  position: relative;
+  background-color: #1A1C2C;
+  border: 1px solid #1A1C2C;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.content .info .card .card-i{
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.content .info .card .card-i i{
+  font-size: 20px;
+}
+
+.content .info .card .card_i_1:first-of-type{
+  background-color: #E67772;
+  border: 1px solid #E67772;
+}
+.content .info .card .card_i_2:first-of-type{
+  background-color: #6788ED;
+  border: 1px solid #6788ED;
+}
+.content .info .card .card_i_3:first-of-type{
+  background-color: #639763;
+  border: 1px solid #639763;
+}
+
+
+.content .add .card .card_welcome{
+  padding: 10px !important;
+}
+
+.content .add .card .card_welcome{
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  border-radius: 5px;
+  background-color: #E67772;
+  border: 1px solid #E67772;
+  font-size: 30px;
+  height: 70px;
+  width: 70px;
+  line-height: 47px;
+  text-align: center;
+}
+
+.content .add .add-cat form input{
+  border: 0;
+  border-radius: 5px;
+  padding: 10px;
+  width: 50%;
+  margin-top: 14px;
+}
+
+.content .add .add-cat button{
+  width: 30%;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media(max-width: 768px) {
+  .navbar{
+    display: block;
+  }
+  .navbar ul{
+    position: absolute;
+    top: 28%;
+    right: 5%;
+  }
+  .navbar .navbar-brand{
+    width: 70%;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar .admin-image{
+    display: none;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media(max-width: 524px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .content .add .card .card_welcome{
+    display: none;
+  }
+  .table td, .table th{
+    vertical-align: middle;
+  }
+
+  .table tr img{
+    width: 100% !important;
+  }
+  form input{
+    width: 100% !important;
+  }
+  .row-ml-table{
+    margin-left: -29px !important;  
+  }
+
+  .row-ml-table .col-sm-12{
+    padding: 0 !important;
+  }
+}

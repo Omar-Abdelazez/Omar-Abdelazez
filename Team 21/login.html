@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	<header class="header1">
+		<!-- Header desktop -->
+		<div class="container-menu-header">
+			<div class="topbar">
+				<div class="topbar-social">
+					<a href="#" class="topbar-social-item fab fa-facebook"></a>
+					<a href="#" class="topbar-social-item fab fa-instagram"></a>
+					<a href="#" class="topbar-social-item fab fa-pinterest-p"></a>
+					<a href="#" class="topbar-social-item fab fa-snapchat-ghost"></a>
+					<a href="#" class="topbar-social-item fab fa-youtube"></a>
+				</div>
+
+				<span class="topbar-child1">
+					Free shipping for standard order over $100
+				</span>
+
+				<div class="topbar-child2">
+					<span class="topbar-email">
+						fashe@example.com
+					</span>
+
+				</div>
+			</div>
+
+			<div class="wrap_header">
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<img src="images/logo.png" alt="IMG-LOGO">
+				</a>
+
+				<!-- Menu -->
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+
+							<li>
+								<a href="cart.html">Cart</a>
+							</li>
+
+							<li>
+								<a href="about.html">About</a>
+							</li>
+
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<!-- Header Icon -->
+					<!-- Header Icon -->
+				<div class="header-icons">
+					<span class="header-wrapicon1 dis-block">
+						<a class="btn btn-dark mr-2" href="./login.html">Login</a>
+						<a class="btn btn-dark" href="./rigister.html">Rigister</a>
+				</span>
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<i class="fas fa-shopping-cart header-icon1 js-show-header-dropdown" style="font-size: 25px;"></i>
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				<img src="images/logo.png" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<span class="header-wrapicon1 dis-block">
+						<a class="btn btn-dark mr-2" href="./login.html">Login</a>
+						<a class="btn btn-dark" href="./rigister.html">Rigister</a>
+				</span>
+
+					<span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<i class="fas fa-shopping-cart header-icon1 js-show-header-dropdown" style="font-size: 25px;"></i>
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<button class="btn btn-block bg1 bo-rad-20 hov1 s-text1 trans-0-4 text-center">
+										<a href="cart.html">
+											View Cart
+										</a>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Menu Mobile -->
+		<div class="wrap-side-menu" >
+			<nav class="side-menu">
+				<ul class="main-menu">
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							Free shipping for standard order over $100
+						</span>
+					</li>
+
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								admain@example.com
+							</span>
+						</div>
+					</li>
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="#" class="topbar-social-item fab fa-facebook"></a>
+							<a href="#" class="topbar-social-item fab fa-instagram"></a>
+							<a href="#" class="topbar-social-item fab fa-pinterest-p"></a>
+							<a href="#" class="topbar-social-item fab fa-snapchat-ghost"></a>
+							<a href="#" class="topbar-social-item fab fa-youtube"></a>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="index.html">Home</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="cart.html">Cart</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Title Page -->
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)), url(images/login.jpg); background-position: left; background-attachment: fixed;">
+		<h2 class="l-text2 t-center">
+			Login
+		</h2>
+	</section>
+
+	<!-- content page -->
+  <div class="login">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <form class="login-form shadow1" action="">
+            <h4>Login</h4>
+            <i class="fas fa-user"></i>
+            <input type="text" name="name" id="" placeholder="username"><br />
+            <i class="fas fa-key"></i>
+            <input type="password" name="password" id="" placeholder="password"><br />
+            <a href="#">forget password ?</a><br />
+            <a href="./rigister.html">create new account</a><br />
+            <button class="btn btn-dark mt-5">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Footer -->
+<footer class="pl-5">
+	<div class="row container p-b-90">
+		<div class="col-sm-12 col-md-6 p-t-40 p-l-15 p-r-15 respon3">
+			<h4 class="s-text12 p-b-30">
+				GET IN TOUCH
+			</h4>
+
+			<div>
+				<p class="s-text7 w-size27">
+					Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+				</p>
+
+				<div class="flex-m p-t-30">
+					<a href="#" class="fs-18 color1 p-r-20 fab fa-facebook"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fab fa-instagram"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fab fa-pinterest-p"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fab fa-snapchat-ghost"></a>
+					<a href="#" class="fs-18 color1 p-r-20 fab fa-youtube"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12 col-md-3 p-t-40 p-l-15 p-r-15 respon4">
+			<h4 class="s-text12 p-b-30">
+				Categories
+			</h4>
+
+			<ul>
+				<li class="p-b-9">
+					<a href="#" class="s-text7">
+						Men
+					</a>
+				</li>
+
+				<li class="p-b-9">
+					<a href="#" class="s-text7">
+						Women
+					</a>
+				</li>
+
+				<li class="p-b-9">
+					<a href="#" class="s-text7">
+						Kids
+					</a>
+				</li>
+
+				<li class="p-b-9">
+					<a href="#" class="s-text7">
+						Accesories
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-sm-12 col-md-3 p-t-40 p-l-15 p-r-15 respon4">
+			<h4 class="s-text12 p-b-30">
+				Links
+			</h4>
+
+			<ul>
+				<li class="p-b-9">
+					<a href="#" class="s-text7">
+						About Us
+					</a>
+				</li>
+
+				<li class="p-b-9">
+					<a href="#" class="s-text7">
+						Contact Us
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection -->
+	<div id="dropDownSelect1"></div>
+	<div id="dropDownSelect2"></div>
+
+
+
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect2')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
